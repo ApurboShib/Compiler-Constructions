@@ -1,0 +1,66 @@
+
+question-5.o:	file format mach-o arm64
+
+Disassembly of section __TEXT,__text:
+
+0000000000000000 <ltmp0>:
+       0: d100c3ff     	sub	sp, sp, #0x30
+       4: a9027bfd     	stp	x29, x30, [sp, #0x20]
+       8: 910083fd     	add	x29, sp, #0x20
+       c: b81fc3bf     	stur	wzr, [x29, #-0x4]
+      10: 90000000     	adrp	x0, 0x0 <ltmp0>
+      14: 91000000     	add	x0, x0, #0x0
+      18: 94000000     	bl	0x18 <ltmp0+0x18>
+      1c: 910003e9     	mov	x9, sp
+      20: d10023a8     	sub	x8, x29, #0x8
+      24: f9000128     	str	x8, [x9]
+      28: d10033a8     	sub	x8, x29, #0xc
+      2c: f9000528     	str	x8, [x9, #0x8]
+      30: 90000000     	adrp	x0, 0x0 <ltmp0>
+      34: 91000000     	add	x0, x0, #0x0
+      38: 94000000     	bl	0x38 <ltmp0+0x38>
+      3c: b85f83a8     	ldur	w8, [x29, #-0x8]
+      40: b85f43a9     	ldur	w9, [x29, #-0xc]
+      44: 6b090108     	subs	w8, w8, w9
+      48: 5400018d     	b.le	0x78 <ltmp0+0x78>
+      4c: 14000001     	b	0x50 <ltmp0+0x50>
+      50: b85f83a8     	ldur	w8, [x29, #-0x8]
+      54: aa0803ea     	mov	x10, x8
+      58: b85f43a8     	ldur	w8, [x29, #-0xc]
+      5c: 910003e9     	mov	x9, sp
+      60: f900012a     	str	x10, [x9]
+      64: f9000528     	str	x8, [x9, #0x8]
+      68: 90000000     	adrp	x0, 0x0 <ltmp0>
+      6c: 91000000     	add	x0, x0, #0x0
+      70: 94000000     	bl	0x70 <ltmp0+0x70>
+      74: 1400001b     	b	0xe0 <ltmp0+0xe0>
+      78: b85f83a8     	ldur	w8, [x29, #-0x8]
+      7c: b85f43a9     	ldur	w9, [x29, #-0xc]
+      80: 6b090108     	subs	w8, w8, w9
+      84: 5400018a     	b.ge	0xb4 <ltmp0+0xb4>
+      88: 14000001     	b	0x8c <ltmp0+0x8c>
+      8c: b85f43a8     	ldur	w8, [x29, #-0xc]
+      90: aa0803ea     	mov	x10, x8
+      94: b85f83a8     	ldur	w8, [x29, #-0x8]
+      98: 910003e9     	mov	x9, sp
+      9c: f900012a     	str	x10, [x9]
+      a0: f9000528     	str	x8, [x9, #0x8]
+      a4: 90000000     	adrp	x0, 0x0 <ltmp0>
+      a8: 91000000     	add	x0, x0, #0x0
+      ac: 94000000     	bl	0xac <ltmp0+0xac>
+      b0: 1400000b     	b	0xdc <ltmp0+0xdc>
+      b4: b85f83a8     	ldur	w8, [x29, #-0x8]
+      b8: aa0803ea     	mov	x10, x8
+      bc: b85f43a8     	ldur	w8, [x29, #-0xc]
+      c0: 910003e9     	mov	x9, sp
+      c4: f900012a     	str	x10, [x9]
+      c8: f9000528     	str	x8, [x9, #0x8]
+      cc: 90000000     	adrp	x0, 0x0 <ltmp0>
+      d0: 91000000     	add	x0, x0, #0x0
+      d4: 94000000     	bl	0xd4 <ltmp0+0xd4>
+      d8: 14000001     	b	0xdc <ltmp0+0xdc>
+      dc: 14000001     	b	0xe0 <ltmp0+0xe0>
+      e0: 52800000     	mov	w0, #0x0                ; =0
+      e4: a9427bfd     	ldp	x29, x30, [sp, #0x20]
+      e8: 9100c3ff     	add	sp, sp, #0x30
+      ec: d65f03c0     	ret

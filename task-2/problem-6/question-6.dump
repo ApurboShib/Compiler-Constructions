@@ -1,0 +1,47 @@
+
+question-6.o:	file format mach-o arm64
+
+Disassembly of section __TEXT,__text:
+
+0000000000000000 <ltmp0>:
+       0: d10243ff     	sub	sp, sp, #0x90
+       4: a9087bfd     	stp	x29, x30, [sp, #0x80]
+       8: 910203fd     	add	x29, sp, #0x80
+       c: 90000008     	adrp	x8, 0x0 <ltmp0>
+      10: f9400108     	ldr	x8, [x8]
+      14: f9400108     	ldr	x8, [x8]
+      18: f81f83a8     	stur	x8, [x29, #-0x8]
+      1c: b90013ff     	str	wzr, [sp, #0x10]
+      20: 90000000     	adrp	x0, 0x0 <ltmp0>
+      24: 91000000     	add	x0, x0, #0x0
+      28: 94000000     	bl	0x28 <ltmp0+0x28>
+      2c: 910003e9     	mov	x9, sp
+      30: 910053e8     	add	x8, sp, #0x14
+      34: f9000128     	str	x8, [x9]
+      38: 90000000     	adrp	x0, 0x0 <ltmp0>
+      3c: 91000000     	add	x0, x0, #0x0
+      40: 94000000     	bl	0x40 <ltmp0+0x40>
+      44: 39c053e8     	ldrsb	w8, [sp, #0x14]
+      48: 7100c108     	subs	w8, w8, #0x30
+      4c: 540000c1     	b.ne	0x64 <ltmp0+0x64>
+      50: 14000001     	b	0x54 <ltmp0+0x54>
+      54: 90000000     	adrp	x0, 0x0 <ltmp0>
+      58: 91000000     	add	x0, x0, #0x0
+      5c: 94000000     	bl	0x5c <ltmp0+0x5c>
+      60: 14000005     	b	0x74 <ltmp0+0x74>
+      64: 90000000     	adrp	x0, 0x0 <ltmp0>
+      68: 91000000     	add	x0, x0, #0x0
+      6c: 94000000     	bl	0x6c <ltmp0+0x6c>
+      70: 14000001     	b	0x74 <ltmp0+0x74>
+      74: f85f83a9     	ldur	x9, [x29, #-0x8]
+      78: 90000008     	adrp	x8, 0x0 <ltmp0>
+      7c: f9400108     	ldr	x8, [x8]
+      80: f9400108     	ldr	x8, [x8]
+      84: eb090108     	subs	x8, x8, x9
+      88: 54000060     	b.eq	0x94 <ltmp0+0x94>
+      8c: 14000001     	b	0x90 <ltmp0+0x90>
+      90: 94000000     	bl	0x90 <ltmp0+0x90>
+      94: 52800000     	mov	w0, #0x0                ; =0
+      98: a9487bfd     	ldp	x29, x30, [sp, #0x80]
+      9c: 910243ff     	add	sp, sp, #0x90
+      a0: d65f03c0     	ret
