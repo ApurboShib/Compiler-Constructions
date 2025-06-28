@@ -1,0 +1,13 @@
+int main() {
+    int i, n;
+    char ch;
+
+    printf("Enter a number and a character: ");
+    scanf("%d %c", &n, &ch);
+
+    for (i = 0; i < n; i++) {
+        printf("Character #%d: %c\n", i + 1, ch);
+    }
+
+    return 0;
+}

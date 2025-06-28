@@ -1,0 +1,14 @@
+
+int main() {
+    int x = 12, y = 8;
+
+    if (x > y && x != 0) {
+        printf("x is greater than y and not zero\n");
+    } else if (x == y) {
+        printf("x is equal to y\n");
+    } else {
+        printf("x is less than y or zero\n");
+    }
+
+    return 0;
+}

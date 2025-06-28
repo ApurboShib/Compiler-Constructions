@@ -1,0 +1,45 @@
+int -> KEYWORD
+main -> IDENTIFIER
+( -> LPAREN
+) -> RPAREN
+{ -> LBRACE
+int -> KEYWORD
+age -> IDENTIFIER
+= -> OPERATOR
+20 -> NUMBER
+; -> SEMICOLON
+float -> KEYWORD
+gpa -> IDENTIFIER
+= -> OPERATOR
+3.75 -> NUMBER
+; -> SEMICOLON
+char -> KEYWORD
+grade -> IDENTIFIER
+= -> OPERATOR
+'A' -> CHAR_CONSTANT
+; -> SEMICOLON
+printf -> IDENTIFIER
+( -> LPAREN
+"Age: %d\n" -> STRING_LITERAL
+, -> COMMA
+age -> IDENTIFIER
+) -> RPAREN
+; -> SEMICOLON
+printf -> IDENTIFIER
+( -> LPAREN
+"GPA: %.2f\n" -> STRING_LITERAL
+, -> COMMA
+gpa -> IDENTIFIER
+) -> RPAREN
+; -> SEMICOLON
+printf -> IDENTIFIER
+( -> LPAREN
+"Grade: %c\n" -> STRING_LITERAL
+, -> COMMA
+grade -> IDENTIFIER
+) -> RPAREN
+; -> SEMICOLON
+return -> KEYWORD
+0 -> NUMBER
+; -> SEMICOLON
+} -> RBRACE
