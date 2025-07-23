@@ -1,0 +1,14 @@
+
+
+int main() {
+    double d = -1.23e-5;
+    int i = 0;
+
+    while (i < 3) {
+        printf("Iteration %d: %e\n", i + 1, d);
+        d *= 2;
+        i++;
+    }
+
+    return 0;
+}

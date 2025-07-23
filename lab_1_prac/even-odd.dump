@@ -1,0 +1,31 @@
+
+even-odd.o:	file format mach-o arm64
+
+Disassembly of section __TEXT,__text:
+
+0000000000000000 <ltmp0>:
+       0: d10083ff     	sub	sp, sp, #0x20
+       4: a9017bfd     	stp	x29, x30, [sp, #0x10]
+       8: 910043fd     	add	x29, sp, #0x10
+       c: b81fc3bf     	stur	wzr, [x29, #-0x4]
+      10: 52800148     	mov	w8, #0xa                ; =10
+      14: b9000be8     	str	w8, [sp, #0x8]
+      18: b9400be8     	ldr	w8, [sp, #0x8]
+      1c: 5280004a     	mov	w10, #0x2               ; =2
+      20: 1aca0d09     	sdiv	w9, w8, w10
+      24: 1b0a7d29     	mul	w9, w9, w10
+      28: 6b090108     	subs	w8, w8, w9
+      2c: 350000c8     	cbnz	w8, 0x44 <ltmp0+0x44>
+      30: 14000001     	b	0x34 <ltmp0+0x34>
+      34: 90000000     	adrp	x0, 0x0 <ltmp0>
+      38: 91000000     	add	x0, x0, #0x0
+      3c: 94000000     	bl	0x3c <ltmp0+0x3c>
+      40: 14000005     	b	0x54 <ltmp0+0x54>
+      44: 90000000     	adrp	x0, 0x0 <ltmp0>
+      48: 91000000     	add	x0, x0, #0x0
+      4c: 94000000     	bl	0x4c <ltmp0+0x4c>
+      50: 14000001     	b	0x54 <ltmp0+0x54>
+      54: 52800000     	mov	w0, #0x0                ; =0
+      58: a9417bfd     	ldp	x29, x30, [sp, #0x10]
+      5c: 910083ff     	add	sp, sp, #0x20
+      60: d65f03c0     	ret
