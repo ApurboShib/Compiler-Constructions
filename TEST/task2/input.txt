@@ -1,0 +1,25 @@
+#include <stdio.h>
+float computeAverage(int total, int count);
+int main() {
+    int marks[5];         
+    int i;
+    float avg;
+    int totalMarks;
+    char grade;
+    for (i = 0; i < 5; i++) {
+        totalMarks += marks[i];  
+    }
+    avg = computeAverage(totalMarks);  
+    grade = avg;  
+    if (grade > 60.5) {
+        printf("Passed!\n");
+    }
+    printf("Average: %d\n", avg);   
+    printf("Grade: %f\n", grade);   
+
+    return 0;
+}
+
+float computeAverage(int total, int count, int bonus) {
+    return (total + bonus) / count;
+}

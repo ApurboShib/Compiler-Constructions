@@ -1,0 +1,8 @@
+int main() {
+int num, original, digit;
+int reversed = 0;
+printf("test");
+scanf("%d", &num);
+original = num;
+return 0;
+}

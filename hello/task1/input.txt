@@ -1,0 +1,21 @@
+int main() {
+int num, original, reversed = 0, digit;
+printf("Enter an integer: ");
+scanf("%d", &num);
+original = num;
+do {
+digit = num % 10; // Get last digit
+reversed = reversed * 10 + digit; // Append digit
+num = num / 10; // Remove last digit
+} while (num != 0);
+
+10
+
+printf("Reversed number: %d\n", reversed);
+if (original == reversed) {
+printf("The number is a palindrome.\n");
+} else {
+printf("The number is not a palindrome.\n");
+}
+return 0;
+}

@@ -6,20 +6,21 @@ void yyerror(char *);
 int yylex();
 %}
 
-%token DO WHILE LPAREN RPAREN LBRACE RBRACE ID NUM SEMICOLON INC ASSIGN LE PRINT
+%token FOR LPAREN RPAREN LBRACE RBRACE ID NUM SEMICOLON ASSIGN LE INC PRINT
 
 %%
-program: DO LBRACE stmtlist RBRACE WHILE LPAREN condition RPAREN SEMICOLON ;
+program: FOR LPAREN assign SEMICOLON condition SEMICOLON increment RPAREN LBRACE stmtlist RBRACE ;
+
+assign: ID ASSIGN NUM ;
+
+condition: ID LE NUM ;
+
+increment: ID INC ;
 
 stmtlist: stmtlist stmt
         | /* empty */ ;
 
-stmt: ID ASSIGN NUM SEMICOLON
-    | PRINT ID SEMICOLON
-    | ID INC SEMICOLON
-    ;
-
-condition: ID LE NUM ;
+stmt: PRINT ID SEMICOLON ;
 %%
 
 void yyerror(char *s) {

@@ -1,0 +1,9 @@
+In line no 2, Inserting computeAverage with type REAL_TYPE in symbol table.
+In line no 3, Inserting main with type INT_TYPE in symbol table.
+In line no 4, Inserting marks with type INT_TYPE in symbol table.
+In line no 5, Inserting i with type INT_TYPE in symbol table.
+In line no 6, Inserting avg with type REAL_TYPE in symbol table.
+In line no 7, Inserting totalMarks with type INT_TYPE in symbol table.
+In line no 8, Inserting grade with type CHAR_TYPE in symbol table.
+In line no 23, Inserting count with type INT_TYPE in symbol table.
+Parsing finished!

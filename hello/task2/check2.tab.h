@@ -35,8 +35,8 @@
    especially those whose name start with YY_ or yy_.  They are
    private implementation details that can be changed or removed.  */
 
-#ifndef YY_YY_DOWHILE_TAB_H_INCLUDED
-# define YY_YY_DOWHILE_TAB_H_INCLUDED
+#ifndef YY_YY_CHECK2_TAB_H_INCLUDED
+# define YY_YY_CHECK2_TAB_H_INCLUDED
 /* Debug traces.  */
 #ifndef YYDEBUG
 # define YYDEBUG 0
@@ -54,26 +54,56 @@ extern int yydebug;
     YYEOF = 0,                     /* "end of file"  */
     YYerror = 256,                 /* error  */
     YYUNDEF = 257,                 /* "invalid token"  */
-    DO = 258,                      /* DO  */
-    WHILE = 259,                   /* WHILE  */
-    LPAREN = 260,                  /* LPAREN  */
-    RPAREN = 261,                  /* RPAREN  */
-    LBRACE = 262,                  /* LBRACE  */
-    RBRACE = 263,                  /* RBRACE  */
-    ID = 264,                      /* ID  */
-    NUM = 265,                     /* NUM  */
-    SEMICOLON = 266,               /* SEMICOLON  */
-    INC = 267,                     /* INC  */
-    ASSIGN = 268,                  /* ASSIGN  */
-    LE = 269,                      /* LE  */
-    PRINT = 270                    /* PRINT  */
+    INT = 258,                     /* INT  */
+    CHAR = 259,                    /* CHAR  */
+    DOUBLE = 260,                  /* DOUBLE  */
+    SCANF = 261,                   /* SCANF  */
+    PRINTF = 262,                  /* PRINTF  */
+    POW = 263,                     /* POW  */
+    SWITCH = 264,                  /* SWITCH  */
+    CASE = 265,                    /* CASE  */
+    DEFAULT = 266,                 /* DEFAULT  */
+    BREAK = 267,                   /* BREAK  */
+    IF = 268,                      /* IF  */
+    ELSE = 269,                    /* ELSE  */
+    RETURN = 270,                  /* RETURN  */
+    ID = 271,                      /* ID  */
+    NUM = 272,                     /* NUM  */
+    CHARLIT = 273,                 /* CHARLIT  */
+    STRING = 274,                  /* STRING  */
+    LPAREN = 275,                  /* LPAREN  */
+    RPAREN = 276,                  /* RPAREN  */
+    LBRACE = 277,                  /* LBRACE  */
+    RBRACE = 278,                  /* RBRACE  */
+    SEMICOLON = 279,               /* SEMICOLON  */
+    COMMA = 280,                   /* COMMA  */
+    AMP = 281,                     /* AMP  */
+    COLON = 282,                   /* COLON  */
+    ASSIGN = 283,                  /* ASSIGN  */
+    PLUS = 284,                    /* PLUS  */
+    MINUS = 285,                   /* MINUS  */
+    MUL = 286,                     /* MUL  */
+    DIV = 287,                     /* DIV  */
+    CARET = 288,                   /* CARET  */
+    EQ = 289,                      /* EQ  */
+    NEQ = 290                      /* NEQ  */
   };
   typedef enum yytokentype yytoken_kind_t;
 #endif
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-typedef int YYSTYPE;
+union YYSTYPE
+{
+#line 11 "check2.y"
+
+    double num;
+    char* id;
+
+#line 104 "check2.tab.h"
+
+};
+typedef union YYSTYPE YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define YYSTYPE_IS_DECLARED 1
 #endif
@@ -85,4 +115,4 @@ extern YYSTYPE yylval;
 int yyparse (void);
 
 
-#endif /* !YY_YY_DOWHILE_TAB_H_INCLUDED  */
+#endif /* !YY_YY_CHECK2_TAB_H_INCLUDED  */

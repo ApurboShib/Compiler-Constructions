@@ -1,27 +1,26 @@
 %option noyywrap
 
 %{
-    #include "dowhile.tab.h"
+    #include "turjo.tab.h"
 %}
 
-digit [0-9]
-number {digit}+
-id [a-zA-Z_][a-zA-Z0-9_]*
-ws [ \t\n]
+digit   [0-9]
+number  {digit}+
+id      [a-zA-Z_][a-zA-Z0-9_]*
+ws      [ \t\n]
 
 %%
 {ws}            {}
-"do"            { return DO; }
-"while"         { return WHILE; }
+"for"           { return FOR; }
+"print"         { return PRINT; }
 "("             { return LPAREN; }
 ")"             { return RPAREN; }
 "{"             { return LBRACE; }
 "}"             { return RBRACE; }
-"++"            { return INC; }
-"<="            { return LE; }
 ";"             { return SEMICOLON; }
 "="             { return ASSIGN; }
-"print"         { return PRINT; }
+"<="            { return LE; }
+"++"            { return INC; }
 {number}        { yylval = atoi(yytext); return NUM; }
 {id}            { return ID; }
 %%

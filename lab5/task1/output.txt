@@ -1,0 +1,8 @@
+In line no 5, Inserting numbers with type INT_TYPE in symbol table.
+In line no 6, Inserting i with type INT_TYPE in symbol table.
+In line no 7, Inserting total with type REAL_TYPE in symbol table.
+In line no 8, Inserting length with type INT_TYPE in symbol table.
+In line no 9, Inserting flag with type CHAR_TYPE in symbol table.
+In line no 23, Inserting i with type INT_TYPE in symbol table.
+In line no 24, Inserting sum with type REAL_TYPE in symbol table.
+Parsing finished!
